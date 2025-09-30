@@ -1,6 +1,7 @@
 {
   "short_name": "Pendia",
   "name": "Pendia by Joaquin",
+  "description": "Pendia es una app de productividad creada por Joaquín.",
   "icons": [
     {
       "src": "assets/icon/favicon.png",
@@ -18,14 +19,6 @@
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "assets/icon/icon2.png",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "My PWA on Desktop"
     }
   ],
   "start_url": ".",
