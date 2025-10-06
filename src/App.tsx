@@ -22,8 +22,9 @@ import "@ionic/react/css/display.css";
 /* Theme variables */
 import "./theme/variables.css";
 import { Home } from "./pages/Home";
-import { Login } from "./pages/auth/login/Login";
 import { TabsLayout } from "./routes/TabsLayout";
+import Login from "./pages/auth/login/Login";
+import Register from "./pages/auth/register/Register";
 
 setupIonicReact();
 
@@ -36,11 +37,7 @@ const App: React.FC = () => (
         <Route exact path="/home" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/logout" render={() => <Redirect to="/login" />} />
-        <Route
-          exact
-          path="/register"
-          render={() => <Redirect to="/register" />}
-        />
+        <Route exact path="/register" component={Register} />
 
         {/* Páginas dentro del layout de tabs */}
         <Route path="/menu" component={TabsLayout} />

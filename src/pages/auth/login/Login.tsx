@@ -1,6 +1,25 @@
 import React from "react";
-import "./Login.css";
+import {
+  IonPage,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from "@ionic/react";
 
-export const Login: React.FC = () => {
-  return <div>Login</div>;
+const Login: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Login</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent className="ion-padding">
+        <div>Login</div>
+      </IonContent>
+    </IonPage>
+  );
 };
+
+export default Login;

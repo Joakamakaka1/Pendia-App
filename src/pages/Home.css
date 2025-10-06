@@ -1,5 +1,6 @@
 ion-content,
-ion-footer {
+ion-footer,
+ion-toolbar {
   --ion-background-color: #000000;
 }
 
@@ -13,10 +14,14 @@ ion-button {
 
 .home-title {
   color: #ffffff;
+  background-color: #000000;
   font-size: 32px;
   font-weight: semibold;
   padding-bottom: 25px;
   font-family: "Super Trend", sans-serif;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 
 .subtitle-home {
