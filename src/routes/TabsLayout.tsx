@@ -26,22 +26,25 @@ export const TabsLayout = () => {
         <Route exact path="/menu" render={() => <Redirect to="/menu/tab1" />} />
       </IonRouterOutlet>
 
-      <IonTabBar slot="bottom">
+      <IonTabBar
+        slot="bottom"
+        style={{ backgroundColor: "#000000", color: "#ffffff" }}
+      >
         <IonTabButton tab="tab1" href="/menu/tab1">
           <IonIcon icon={square} />
-          <IonLabel>Tab 1</IonLabel>
+          <IonLabel>Pendientes</IonLabel>
         </IonTabButton>
         <IonTabButton tab="tab2" href="/menu/tab2">
           <IonIcon icon={square} />
-          <IonLabel>Tab 2</IonLabel>
+          <IonLabel>Solicitudes</IonLabel>
         </IonTabButton>
         <IonTabButton tab="tab3" href="/menu/tab3">
           <IonIcon icon={square} />
-          <IonLabel>Tab 3</IonLabel>
+          <IonLabel>PendIA</IonLabel>
         </IonTabButton>
         <IonTabButton tab="tab4" href="/menu/tab4">
           <IonIcon icon={square} />
-          <IonLabel>Tab 4</IonLabel>
+          <IonLabel>Perfil</IonLabel>
         </IonTabButton>
       </IonTabBar>
     </IonTabs>

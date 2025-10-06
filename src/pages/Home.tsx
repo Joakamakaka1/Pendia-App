@@ -15,11 +15,11 @@ export const Home: React.FC = () => {
   const navigate = useHistory();
 
   const navigateToLogin = () => {
-    navigate.push("/login");
+    navigate.push("/menu");
   };
 
   const navigateToRegister = () => {
-    navigate.push("/register");
+    navigate.push("/menu");
   };
 
   return (

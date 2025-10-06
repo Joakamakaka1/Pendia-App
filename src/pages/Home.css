@@ -4,6 +4,13 @@ ion-toolbar {
   --ion-background-color: #000000;
 }
 
+/*CSS GLOBAL*/
+h2,
+p {
+  color: #000000;
+  font-family: "Super Trend", sans-serif;
+}
+
 ion-input {
   margin-bottom: 16px;
 }
