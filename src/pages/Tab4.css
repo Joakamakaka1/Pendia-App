@@ -31,14 +31,12 @@
   max-width: 400px;
 }
 
-/* === Tarjetas === */
 .profile-card {
   background-color: #181818;
   width: 100%;
   max-width: 400px;
   margin-top: 1px;
   border-radius: 16px;
-  height: 60px;
 }
 
 .profile-item {
@@ -51,20 +49,21 @@
   padding: 0 12px;
 }
 
-/* Label a la izquierda */
-.field-label {
+.field-label-type {
   color: white;
   font-weight: 500;
   font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Valor alineado a la derecha */
-.field-value {
+.field-label {
   color: #ccc;
-  font-size: 14px;
-  text-align: right;
-  flex: 1;
-  margin-left: 20px;
+  font-size: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

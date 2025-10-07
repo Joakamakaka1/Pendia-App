@@ -1,14 +1,13 @@
-import React from "react";
 import {
-  IonPage,
-  IonContent,
+  IonButton,
   IonCard,
+  IonContent,
   IonItem,
   IonLabel,
-  IonNote,
   IonListHeader,
-  IonButton,
+  IonPage,
 } from "@ionic/react";
+import React from "react";
 import "./Tab4.css";
 
 export const Tab4: React.FC = () => {
@@ -39,22 +38,24 @@ export const Tab4: React.FC = () => {
 
           <IonCard className="profile-card">
             <IonItem lines="none" className="profile-item">
-              <IonLabel className="field-label">Nombre</IonLabel>
-              <IonNote className="field-value">{profile.name}</IonNote>
+              <IonLabel className="field-label-type">Nombre</IonLabel>
+              <IonLabel className="field-label">{profile.name}</IonLabel>
             </IonItem>
           </IonCard>
 
           <IonCard className="profile-card">
             <IonItem lines="none" className="profile-item">
-              <IonLabel className="field-label">Correo electrónico</IonLabel>
-              <IonNote className="field-value">{profile.email}</IonNote>
+              <IonLabel className="field-label-type">
+                Correo electrónico
+              </IonLabel>
+              <IonLabel className="field-label">{profile.email}</IonLabel>
             </IonItem>
           </IonCard>
 
           <IonCard className="profile-card">
             <IonItem lines="none" className="profile-item">
-              <IonLabel className="field-label">Contraseña</IonLabel>
-              <IonNote className="field-value">{profile.password}</IonNote>
+              <IonLabel className="field-label-type">Contraseña</IonLabel>
+              <IonLabel className="field-label">{profile.password}</IonLabel>
             </IonItem>
           </IonCard>
 
@@ -65,15 +66,15 @@ export const Tab4: React.FC = () => {
 
           <IonCard className="profile-card">
             <IonItem lines="none" className="profile-item">
-              <IonLabel className="field-label">Idioma</IonLabel>
-              <IonNote className="field-value">{profile.language}</IonNote>
+              <IonLabel className="field-label-type">Idioma</IonLabel>
+              <IonLabel className="field-label">{profile.language}</IonLabel>
             </IonItem>
           </IonCard>
 
           <IonCard className="profile-card">
             <IonItem lines="none" className="profile-item">
-              <IonLabel className="field-label">Modo Oscuro</IonLabel>
-              <IonNote className="field-value">{profile.darkMode}</IonNote>
+              <IonLabel className="field-label-type">Modo Oscuro</IonLabel>
+              <IonLabel className="field-label">{profile.darkMode}</IonLabel>
             </IonItem>
           </IonCard>
 
