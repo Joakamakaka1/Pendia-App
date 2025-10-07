@@ -1,6 +1,75 @@
-.example-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.debts-content {
+  --background: #121212;
+  color: white;
+  padding-bottom: 80px; /* espacio para el FAB */
+}
+
+.total-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.total-title {
+  font-size: 2.2rem;
+}
+
+.total-amount {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.people-list {
+  padding: 15px 15px 50px 15px;
+}
+
+.person-card {
+  background-color: #181818;
+  margin-bottom: 16px;
+  border-radius: 16px;
+}
+
+.person-item {
+  --background: #181818;
+  color: white;
+}
+
+.person-info h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.person-info p {
+  color: #ccc;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+ion-button[color="danger"] {
+  --color: #ff4c4c;
+  padding-left: 100px;
+}
+
+.floating-ion-button {
+  position: fixed;
+  bottom: 10px; /* justo encima de los tabs */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  z-index: 10;
+  --background: #3b82f6;
+  --background-hover: #2563eb;
+  --border-radius: 30px;
+  --color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.fab-label {
+  text-align: center;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 8px;
 }

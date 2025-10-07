@@ -21,9 +21,6 @@ export const Tab4: React.FC = () => {
             className="profile-avatar"
           />
 
-          <h2>Nombre del Usuario</h2>
-          <p>usuario@correo.com</p>
-
           <IonList className="profile-list">
             <IonListHeader>
               <IonLabel className="labels-profile-list">
