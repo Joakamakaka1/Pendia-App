@@ -79,7 +79,12 @@ const Tab1: React.FC = () => {
                   <h2>{person.name}</h2>
                   <p>Te debe €{person.amount}</p>
                 </IonLabel>
-                <IonButton fill="clear" color="danger" size="small">
+                <IonButton
+                  fill="clear"
+                  color="danger"
+                  size="small"
+                  className="delete-button"
+                >
                   <IonIcon icon={trash} slot="icon-only" />
                 </IonButton>
               </IonItem>

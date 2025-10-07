@@ -1,16 +1,25 @@
+import React from "react";
 import {
   IonPage,
   IonContent,
-  IonButton,
+  IonCard,
   IonItem,
   IonLabel,
-  IonList,
-  IonListHeader,
   IonNote,
+  IonListHeader,
+  IonButton,
 } from "@ionic/react";
-import React from "react";
 import "./Tab4.css";
+
 export const Tab4: React.FC = () => {
+  const profile = {
+    name: "Juan Pérez",
+    email: "juanperez@mail.com",
+    password: "********",
+    language: "Español (España)",
+    darkMode: "Encendido",
+  };
+
   return (
     <IonPage>
       <IonContent fullscreen className="profile-content">
@@ -21,44 +30,54 @@ export const Tab4: React.FC = () => {
             className="profile-avatar"
           />
 
-          <IonList className="profile-list">
-            <IonListHeader>
-              <IonLabel className="labels-profile-list">
-                Información de la cuenta
-              </IonLabel>
-            </IonListHeader>
+          {/* Información de la cuenta */}
+          <IonListHeader>
+            <IonLabel className="labels-profile-list">
+              Información de la cuenta
+            </IonLabel>
+          </IonListHeader>
 
-            <IonItem>
-              <IonLabel>Nombre</IonLabel>
-              <IonNote slot="end">Juan Pérez</IonNote>
+          <IonCard className="profile-card">
+            <IonItem lines="none" className="profile-item">
+              <IonLabel className="field-label">Nombre</IonLabel>
+              <IonNote className="field-value">{profile.name}</IonNote>
             </IonItem>
+          </IonCard>
 
-            <IonItem>
-              <IonLabel>Correo electrónico</IonLabel>
-              <IonNote slot="end">juanperez@mail.com</IonNote>
+          <IonCard className="profile-card">
+            <IonItem lines="none" className="profile-item">
+              <IonLabel className="field-label">Correo electrónico</IonLabel>
+              <IonNote className="field-value">{profile.email}</IonNote>
             </IonItem>
+          </IonCard>
 
-            <IonItem>
-              <IonLabel>Contraseña</IonLabel>
-              <IonNote slot="end">********</IonNote>
+          <IonCard className="profile-card">
+            <IonItem lines="none" className="profile-item">
+              <IonLabel className="field-label">Contraseña</IonLabel>
+              <IonNote className="field-value">{profile.password}</IonNote>
             </IonItem>
-          </IonList>
+          </IonCard>
 
-          <IonList className="profile-list">
-            <IonListHeader>
-              <IonLabel className="labels-profile-list">Preferencias</IonLabel>
-            </IonListHeader>
+          {/* Preferencias */}
+          <IonListHeader>
+            <IonLabel className="labels-profile-list">Preferencias</IonLabel>
+          </IonListHeader>
 
-            <IonItem>
-              <IonLabel>Idioma</IonLabel>
-              <IonNote slot="end">español (España)</IonNote>
+          <IonCard className="profile-card">
+            <IonItem lines="none" className="profile-item">
+              <IonLabel className="field-label">Idioma</IonLabel>
+              <IonNote className="field-value">{profile.language}</IonNote>
             </IonItem>
+          </IonCard>
 
-            <IonItem>
-              <IonLabel>Modo Oscuro</IonLabel>
-              <IonNote slot="end">Encendido</IonNote>
+          <IonCard className="profile-card">
+            <IonItem lines="none" className="profile-item">
+              <IonLabel className="field-label">Modo Oscuro</IonLabel>
+              <IonNote className="field-value">{profile.darkMode}</IonNote>
             </IonItem>
-          </IonList>
+          </IonCard>
+
+          {/* Botón de cierre de sesión */}
           <IonButton
             color="danger"
             expand="block"

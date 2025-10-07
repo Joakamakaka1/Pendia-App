@@ -20,7 +20,7 @@
 }
 
 .people-list {
-  padding: 15px 15px 50px 15px;
+  padding: 15px 15px 70px 15px;
 }
 
 .person-card {
@@ -46,7 +46,7 @@
   font-size: 0.9rem;
 }
 
-ion-button[color="danger"] {
+delete-button {
   --color: #ff4c4c;
   padding-left: 100px;
 }

@@ -1,24 +1,8 @@
-ion-item {
-  --background: #181818;
-  --color: #ffffff;
-  --border-style: solid;
-  --border-radius: 8px;
-  padding: 10px;
-}
-
-.profile-avatar {
-  height: 60%;
-  width: 60%;
-  margin-top: 10px;
-  border-radius: 50%;
-}
-
 .profile-content {
+  --background: #121212;
+  color: white;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100%;
 }
 
 .profile-container {
@@ -26,34 +10,76 @@ ion-item {
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  margin-top: 12px;
 }
 
 .profile-avatar {
   width: 120px;
   height: 120px;
+  border-radius: 50%;
+  margin-top: 20px;
   margin-bottom: 12px;
-}
-
-.profile-list {
-  width: 100%;
-  max-width: 400px;
-  text-align: left;
-  margin-top: 18px;
-  background-color: #000000;
-}
-
-.logout-button {
-  margin-top: 12px;
-  width: 95%;
 }
 
 .labels-profile-list {
   color: #ffffff;
   font-size: 14px;
-  font-weight: semibold;
-  font-family: "Super Trend", sans-serif;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
+  font-weight: 600;
+  margin-top: 26px;
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* === Tarjetas === */
+.profile-card {
+  background-color: #181818;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 1px;
+  border-radius: 16px;
+  height: 60px;
+}
+
+.profile-item {
+  --background: #181818;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 12px;
+}
+
+/* Label a la izquierda */
+.field-label {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* Valor alineado a la derecha */
+.field-value {
+  color: #ccc;
+  font-size: 14px;
+  text-align: right;
+  flex: 1;
+  margin-left: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logout-button {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  z-index: 10;
+  --border-radius: 30px;
+  --color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
