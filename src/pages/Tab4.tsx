@@ -4,14 +4,12 @@ import {
   IonCard,
   IonCardContent,
   IonContent,
-  IonHeader,
   IonIcon,
   IonInput,
   IonItem,
   IonLabel,
   IonPage,
   IonTitle,
-  IonToolbar,
 } from "@ionic/react";
 import { camera, lockOpen, person } from "ionicons/icons";
 import React, { useState } from "react";

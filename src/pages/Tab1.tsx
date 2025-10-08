@@ -3,13 +3,11 @@ import {
   IonButton,
   IonCard,
   IonContent,
-  IonHeader,
   IonIcon,
   IonItem,
   IonLabel,
   IonPage,
   IonTitle,
-  IonToolbar,
 } from "@ionic/react";
 import { add, personAdd, trash } from "ionicons/icons";
 import React from "react";
