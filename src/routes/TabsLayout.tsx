@@ -31,7 +31,7 @@ export const TabsLayout = () => {
         <Route exact path="/menu" render={() => <Redirect to="/menu/tab1" />} />
       </IonRouterOutlet>
 
-      <IonTabBar slot="bottom" translucent>
+      <IonTabBar slot="bottom">
         <IonTabButton tab="tab1" href="/menu/tab1">
           <IonIcon icon={peopleCircleOutline} />
           <IonLabel>Pendientes</IonLabel>

@@ -3,9 +3,8 @@
 }
 
 .profile-container {
-  padding: 16px;
-  max-width: 500px;
-  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto 0 auto;
 }
 
 .profile-avatar-section {

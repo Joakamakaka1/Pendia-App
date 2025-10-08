@@ -44,7 +44,8 @@ ion-content,
 ion-footer,
 ion-toolbar,
 ion-tab-bar,
-ion-header {
+ion-header,
+ion-tabs {
   --ion-background-color: var(--ion-background-color-dark) !important;
 }
 
