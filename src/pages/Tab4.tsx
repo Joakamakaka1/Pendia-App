@@ -23,13 +23,13 @@ export const Tab4: React.FC = () => {
   const [name, setName] = useState("Joaquin");
   const [email, setEmail] = useState("joaquin@pendia.com");
 
-  const handleSave = () => {
-    console.log("Perfil guardado:", { name, email });
-  };
+  // const handleSave = () => {
+  //   console.log("Perfil guardado:", { name, email });
+  // };
 
-  const handleLogout = () => {
-    navigate.push("/login");
-  };
+  // const handleLogout = () => {
+  //   navigate.push("/login");
+  // };
 
   return (
     <IonPage>
@@ -132,7 +132,7 @@ export const Tab4: React.FC = () => {
             <IonButton
               expand="block"
               className="profile-save-button"
-              onClick={handleSave}
+              // onClick={handleSave}
             >
               Save Changes
             </IonButton>
@@ -141,7 +141,7 @@ export const Tab4: React.FC = () => {
               expand="block"
               fill="outline"
               className="profile-logout-button"
-              onClick={handleLogout}
+              // onClick={handleLogout}
             >
               Log Out
             </IonButton>

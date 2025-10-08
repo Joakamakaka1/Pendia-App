@@ -71,13 +71,13 @@ const Tab1: React.FC = () => {
 
   const total = people.reduce((acc, person) => acc + person.amount, 0);
 
-  const handleDeletePerson = (personId: number) => {
-    console.log("Eliminar persona:", personId);
-  };
+  // const handleDeletePerson = (personId: number) => {
 
-  const handleAddPerson = () => {
-    console.log("Añadir nueva persona");
-  };
+  // };
+
+  // const handleAddPerson = () => {
+
+  // };
 
   return (
     <IonPage>
@@ -126,7 +126,7 @@ const Tab1: React.FC = () => {
                     color="danger"
                     size="small"
                     className="debt-delete-button"
-                    onClick={() => handleDeletePerson(person.id)}
+                    // onClick={() => handleDeletePerson(person.id)}
                   >
                     <IonIcon icon={trash} slot="icon-only" />
                   </IonButton>
@@ -141,7 +141,7 @@ const Tab1: React.FC = () => {
               expand="block"
               shape="round"
               className="debts-add-button"
-              onClick={handleAddPerson}
+              // onClick={handleAddPerson}
             >
               <IonIcon icon={add} slot="start" />
               Añadir nueva persona
