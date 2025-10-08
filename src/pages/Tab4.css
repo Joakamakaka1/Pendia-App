@@ -1,84 +1,153 @@
 .profile-content {
-  --background: #121212;
-  color: white;
-  display: flex;
-  justify-content: center;
+  --background: var(--ion-background-color-dark);
 }
 
 .profile-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 16px;
+  max-width: 500px;
+}
+
+.profile-avatar-section {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 20px 0;
+}
+
+.profile-avatar-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .profile-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-top: 20px;
-  margin-bottom: 12px;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 3px solid var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.labels-profile-list {
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 26px;
-  margin-bottom: 20px;
-  text-align: left;
-  width: 100%;
-  max-width: 400px;
+.profile-avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ion-background-color-black);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+  color: var(--color-white);
+  margin: 8px 0 4px 0;
+}
+
+.profile-email {
+  color: var(--color-gray);
+  margin: 0;
 }
 
 .profile-card {
-  background-color: #181818;
-  width: 100%;
-  max-width: 400px;
-  margin-top: 1px;
+  margin: 0 0 20px 0;
   border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
 }
 
-.profile-item {
-  --background: #181818;
-  color: white;
+.profile-card-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0 12px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.field-label-type {
-  color: white;
-  font-weight: 500;
-  font-size: 15px;
+.profile-card-icon {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+.profile-card-title {
+  color: var(--color-white);
+}
+
+.profile-form {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.field-label {
-  color: #ccc;
-  font-size: 4px;
+.profile-form-item {
+  --background: transparent;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --padding-start: 0;
+  --inner-padding-end: 0;
+  margin: 0;
+}
+
+.profile-form-label {
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.profile-form-input {
+  --color: var(--color-white);
+  --padding-start: 12px;
+  --padding-end: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 4px;
+}
+
+.profile-actions {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.logout-button {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 400px;
-  z-index: 10;
-  --border-radius: 30px;
-  --color: white;
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+.profile-action-button {
+  --color: var(--color-white);
+  --background: transparent;
+  --border-radius: 8px;
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: none;
+  --padding-start: 0;
+  --padding-end: 0;
+}
+
+.profile-actions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.profile-save-button {
+  --background: #3880ff;
+  --background-activated: #3171e0;
+  --background-hover: #3171e0;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(56, 128, 255, 0.3);
+  font-weight: 600;
+  height: 48px;
+}
+
+.profile-logout-button {
+  --border-color: rgba(255, 255, 255, 0.2);
+  --color: var(--color-white);
+  --border-radius: 12px;
+  font-weight: 600;
+  height: 48px;
 }

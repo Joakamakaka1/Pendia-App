@@ -13,11 +13,11 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle className="ion-text-center">Listen 3 now</IonTitle>
+          <IonTitle className="ion-text-center">PendIA</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <div className="example-content">Listen now content</div>
+        <div className="example-content">PendIA</div>
       </IonContent>
     </IonPage>
   );

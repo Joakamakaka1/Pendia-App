@@ -1,14 +1,19 @@
 import React from "react";
 import {
-  IonTabs,
+  IonIcon,
+  IonLabel,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonIcon,
-  IonLabel,
+  IonTabs,
 } from "@ionic/react";
+import {
+  cashOutline,
+  documentAttachOutline,
+  peopleCircleOutline,
+  personCircleOutline,
+} from "ionicons/icons";
 import { Redirect, Route } from "react-router-dom";
-import { square } from "ionicons/icons";
 
 import Tab1 from "../pages/Tab1";
 import Tab2 from "../pages/Tab2";
@@ -26,24 +31,21 @@ export const TabsLayout = () => {
         <Route exact path="/menu" render={() => <Redirect to="/menu/tab1" />} />
       </IonRouterOutlet>
 
-      <IonTabBar
-        slot="bottom"
-        style={{ backgroundColor: "#000000", color: "#ffffff" }}
-      >
+      <IonTabBar slot="bottom">
         <IonTabButton tab="tab1" href="/menu/tab1">
-          <IonIcon icon={square} />
+          <IonIcon icon={peopleCircleOutline} />
           <IonLabel>Pendientes</IonLabel>
         </IonTabButton>
         <IonTabButton tab="tab2" href="/menu/tab2">
-          <IonIcon icon={square} />
+          <IonIcon icon={cashOutline} />
           <IonLabel>Solicitudes</IonLabel>
         </IonTabButton>
         <IonTabButton tab="tab3" href="/menu/tab3">
-          <IonIcon icon={square} />
+          <IonIcon icon={documentAttachOutline} />
           <IonLabel>PendIA</IonLabel>
         </IonTabButton>
         <IonTabButton tab="tab4" href="/menu/tab4">
-          <IonIcon icon={square} />
+          <IonIcon icon={personCircleOutline} />
           <IonLabel>Perfil</IonLabel>
         </IonTabButton>
       </IonTabBar>

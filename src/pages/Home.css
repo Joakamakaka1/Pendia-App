@@ -1,65 +1,76 @@
-ion-content,
-ion-footer,
-ion-toolbar {
-  --ion-background-color: #000000;
-}
-
-/*CSS GLOBAL*/
-h2,
-p {
-  color: #ffffff;
-  font-family: "Super Trend", sans-serif;
-}
-
-ion-input {
-  margin-bottom: 16px;
-}
-
-ion-button {
-  width: 140px;
-}
-
-.home-title {
-  color: #ffffff;
-  background-color: #000000;
-  font-size: 32px;
-  font-weight: semibold;
-  padding-bottom: 25px;
-  font-family: "Super Trend", sans-serif;
-  white-space: normal;
-  overflow: visible;
-  text-overflow: unset;
-}
-
-.subtitle-home {
-  color: #c4c4c4;
-  font-size: 14px;
-  padding-bottom: 40px;
-  width: 80%;
-}
-
-.home-container {
+.home-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
-.button-home-container {
+.home-container {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.home-header {
+  margin-bottom: 20px;
+}
+
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.home-title-line {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+
+.home-description {
+  color: var(--color-gray);
+  font-size: 0.85rem;
+  margin: 10px 0 20px 0;
+  padding: 0 10px;
+}
+
+.home-animation-container {
+  display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  flex: 1;
+  margin: 20px 0;
 }
 
-.lottie-animation {
-  width: 250px;
-  height: 250px;
-  margin: 20px auto;
+.home-lottie {
+  width: 500px;
 }
 
-.footer-home {
-  color: #616161;
-  font-size: 14px;
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.home-button {
+  --background: #3880ff;
+  --box-shadow: 0 4px 12px rgba(56, 128, 255, 0.3);
+  --border-radius: 20px;
+  font-weight: 600;
+}
+
+.home-footer {
+  text-align: center;
+}
+
+.home-footer-text {
+  color: var(--color-gray);
+  font-size: 0.9rem;
 }

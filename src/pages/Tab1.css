@@ -1,75 +1,150 @@
 .debts-content {
-  --background: #121212;
-  color: white;
-  padding-bottom: 80px; /* espacio para el FAB */
+  --background: var(--ion-background-color-dark);
 }
 
-.total-container {
-  text-align: center;
-  margin-top: 40px;
+.debts-container {
+  padding: 16px;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.total-title {
-  font-size: 2.2rem;
+.debts-total-card {
+  margin: 0 0 24px 0;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  border: none;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.total-amount {
-  font-size: 2rem;
-  color: white;
-  font-weight: bold;
+.debts-total-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-.people-list {
-  padding: 15px 15px 70px 15px;
+.debts-total-info {
+  flex: 1;
 }
 
-.person-card {
-  background-color: #181818;
-  margin-bottom: 16px;
-  border-radius: 16px;
-}
-
-.person-item {
-  --background: #181818;
-  color: white;
-}
-
-.person-info h2 {
-  color: white;
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.person-info p {
-  color: #ccc;
-  margin: 4px 0 0;
+.debts-total-label {
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.9rem;
-}
-
-delete-button {
-  --color: #ff4c4c;
-  padding-left: 200px;
-}
-
-.floating-ion-button {
-  position: fixed;
-  bottom: 10px; /* justo encima de los tabs */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 400px;
-  z-index: 10;
-  --background: #3b82f6;
-  --background-hover: #2563eb;
-  --border-radius: 30px;
-  --color: white;
+  margin: 0 0 8px 0;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.fab-label {
-  text-align: center;
-  color: white;
+.debts-total-amount {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 4px 0;
+}
+
+.debts-total-count {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.debts-total-icon {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 16px;
+}
+
+.debts-list {
+  margin-bottom: 24px;
+}
+
+.debts-list-title {
+  color: var(--color-white);
+  font-size: 1.25rem;
+  margin: 0 0 16px 8px;
+}
+
+.debt-person-card {
+  margin: 0 0 12px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+.debt-person-item {
+  --background: transparent;
+  --padding-start: 16px;
+  --padding-end: 8px;
+  --inner-padding-end: 0;
+}
+
+.debt-person-avatar {
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.debt-person-info {
+  margin-left: 12px;
+}
+
+.debt-person-name {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+}
+
+.debt-person-amount {
+  color: var(--color-gray);
   font-size: 0.9rem;
-  margin-top: 8px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.debt-delete-button {
+  --color: #ff3b30;
+  --border-radius: 8px;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.debts-add-section {
+  padding: 16px 0 32px 0;
+}
+
+.debts-add-button {
+  --background: #3880ff;
+  --border-radius: 16px;
+  --box-shadow: 0 4px 16px rgba(56, 128, 255, 0.3);
+  font-weight: 600;
+  height: 56px;
+  font-size: 1rem;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  width: 92%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.debts-empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.debts-empty-icon {
+  font-size: 4rem;
+  color: var(--color-gray);
+  margin-bottom: 16px;
+}
+
+.debts-empty-text {
+  color: var(--color-gray);
+  font-size: 1rem;
+  margin: 0;
 }
