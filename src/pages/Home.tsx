@@ -30,10 +30,10 @@ export const Home: React.FC = () => {
           <div className="home-header">
             <IonToolbar className="home-toolbar">
               <IonTitle className="home-title">
-                <span className="home-title-line">Welcome</span>
+                <span className="home-title-line">Bienvenido</span>
               </IonTitle>
               <IonTitle className="home-title">
-                <span>to Pendia</span>
+                <span>a Pendia</span>
               </IonTitle>
             </IonToolbar>
 
@@ -63,7 +63,7 @@ export const Home: React.FC = () => {
               onClick={navigateToLogin}
               className="home-button"
             >
-              Login
+              Iniciar sesion
             </IonButton>
             <IonButton
               expand="block"
@@ -72,7 +72,7 @@ export const Home: React.FC = () => {
               className="home-button"
               color="secondary"
             >
-              Sign up
+              Registrarse
             </IonButton>
           </div>
         </div>

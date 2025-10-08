@@ -127,7 +127,7 @@ export const Tab4: React.FC = () => {
                   className="profile-action-button"
                 >
                   <div className="profile-action-button-text">
-                    Autenticacion de dos factores
+                    Autenticación de dos factores
                   </div>
                 </IonButton>
               </div>

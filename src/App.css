@@ -7,6 +7,11 @@
   --ion-background-color-black: #181818;
 }
 
+@font-face {
+  font-family: "Super Trend";
+  src: url("../public/assets/font/Super\ Trend.ttf") format("truetype");
+}
+
 h1,
 h2,
 h3,
@@ -15,7 +20,7 @@ h5,
 h6,
 ion-title {
   color: var(--color-white);
-  font-family: "Super Trend", sans-serif;
+  font-family: "Super Trend", sans-serif !important;
 }
 
 ion-title {
