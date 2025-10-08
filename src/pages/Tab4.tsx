@@ -15,11 +15,9 @@ import {
 } from "@ionic/react";
 import { camera, lockOpen, person } from "ionicons/icons";
 import React, { useState } from "react";
-import { useHistory } from "react-router";
 import "./Tab4.css";
 
 export const Tab4: React.FC = () => {
-  const navigate = useHistory();
   const [name, setName] = useState("Joaquin");
   const [email, setEmail] = useState("joaquin@pendia.com");
 
