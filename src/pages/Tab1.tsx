@@ -95,7 +95,7 @@ const Tab1: React.FC = () => {
                 <h1 className="debts-total-amount">€{total}</h1>
                 <p className="debts-total-count">
                   {people.length} {people.length === 1 ? "persona" : "personas"}{" "}
-                  te deben
+                  te deben dinero
                 </p>
               </div>
               <div className="debts-total-icon">

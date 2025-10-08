@@ -68,7 +68,9 @@ export const Tab4: React.FC = () => {
                   </IonLabel>
                   <IonInput
                     value={name}
-                    onIonInput={(e) => setName(e.detail.value!)}
+                    onIonInput={(e) =>
+                      setName((e.detail.value as string) || "")
+                    }
                     className="profile-form-input"
                   />
                 </IonItem>
@@ -80,7 +82,9 @@ export const Tab4: React.FC = () => {
                   <IonInput
                     type="email"
                     value={email}
-                    onIonInput={(e) => setEmail(e.detail.value!)}
+                    onIonInput={(e) =>
+                      setEmail((e.detail.value as string) || "")
+                    }
                     className="profile-form-input"
                   />
                 </IonItem>
