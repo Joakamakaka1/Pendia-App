@@ -42,7 +42,7 @@ export const Tab4: React.FC = () => {
             <div className="profile-avatar-container">
               <IonAvatar className="profile-avatar">
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                  src="https://api.dicebear.com/7.x/initials/svg?seed=JC&backgroundColor=666666&color=ffffff&fontSize=40"
                   alt="Profile"
                 />
               </IonAvatar>
@@ -58,7 +58,7 @@ export const Tab4: React.FC = () => {
             <IonCardContent>
               <div className="profile-card-header">
                 <IonIcon icon={person} className="profile-card-icon" />
-                <h3 className="profile-card-title">Informacion personal</h3>
+                <h2 className="profile-card-title">Informacion personal</h2>
               </div>
 
               <div className="profile-form">
@@ -107,7 +107,7 @@ export const Tab4: React.FC = () => {
             <IonCardContent>
               <div className="profile-card-header">
                 <IonIcon icon={lockOpen} className="profile-card-icon" />
-                <h3 className="profile-card-title">Seguridad</h3>
+                <h2 className="profile-card-title">Seguridad</h2>
               </div>
 
               <div className="profile-actions">
@@ -116,14 +116,19 @@ export const Tab4: React.FC = () => {
                   fill="clear"
                   className="profile-action-button"
                 >
-                  Cambiar contraseña
+                  <div className="profile-action-button-text">
+                    Cambiar contraseña
+                  </div>
                 </IonButton>
+
                 <IonButton
                   expand="block"
                   fill="clear"
                   className="profile-action-button"
                 >
-                  Autenticacion de dos factores
+                  <div className="profile-action-button-text">
+                    Autenticacion de dos factores
+                  </div>
                 </IonButton>
               </div>
             </IonCardContent>

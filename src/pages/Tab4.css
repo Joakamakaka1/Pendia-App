@@ -64,7 +64,6 @@
 
 .profile-card-header {
   display: flex;
-  align-items: center;
   margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -87,27 +86,18 @@
 }
 
 .profile-form-item {
-  --background: transparent;
-  --border-color: rgba(255, 255, 255, 0.1);
   --padding-start: 0;
   --inner-padding-end: 0;
-  margin: 0;
+  --color: var(--color-gray);
 }
 
 .profile-form-label {
-  color: var(--color-gray);
   font-size: 0.9rem;
-  margin-bottom: 8px;
 }
 
 .profile-form-input {
   --color: var(--color-white);
-  --padding-start: 12px;
-  --padding-end: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-actions {
@@ -118,13 +108,19 @@
 
 .profile-action-button {
   --color: var(--color-white);
-  --background: transparent;
   --border-radius: 8px;
-  margin: 0;
   font-size: 0.9rem;
   text-transform: none;
-  --padding-start: 0;
-  --padding-end: 0;
+  --justify-content: flex-start; /* Ionic variable for alignment */
+  text-align: left;
+  --background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-action-button-text {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .profile-actions-section {
@@ -139,7 +135,7 @@
   --background-activated: #3171e0;
   --background-hover: #3171e0;
   --border-radius: 12px;
-  --box-shadow: 0 4px 12px rgba(56, 128, 255, 0.3);
+  --box-shadow: 0 4px 4px rgba(56, 128, 255, 0.3);
   font-weight: 600;
   height: 48px;
 }
