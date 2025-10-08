@@ -28,14 +28,14 @@ export const Home: React.FC = () => {
         <div className="home-container">
           {/* Header Section */}
           <div className="home-header">
-            <IonToolbar className="home-toolbar">
+            <div className="home-toolbar">
               <IonTitle className="home-title">
                 <span className="home-title-line">Bienvenido</span>
               </IonTitle>
               <IonTitle className="home-title">
                 <span>a Pendia</span>
               </IonTitle>
-            </IonToolbar>
+            </div>
 
             <p className="home-description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque

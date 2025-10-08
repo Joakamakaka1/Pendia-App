@@ -83,11 +83,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonContent fullscreen className="debts-content">
         <div className="debts-container">
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle>Deudas</IonTitle>
-            </IonToolbar>
-          </IonHeader>
+          <IonTitle className="debts-title">Deudas</IonTitle>
           <IonCard className="debts-total-card">
             <div className="debts-total-content">
               <div className="debts-total-info">

@@ -5,14 +5,18 @@
 .debts-container {
   padding: 16px;
   max-width: 500px;
-  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.debts-title {
+  padding-bottom: 10px;
 }
 
 .debts-total-card {
   margin: 0 0 24px 0;
   border-radius: 20px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 4px rgba(102, 126, 234, 0.3);
   border: none;
   width: 100%;
   margin-top: 10px;

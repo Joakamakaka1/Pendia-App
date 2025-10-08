@@ -33,11 +33,7 @@ export const Tab4: React.FC = () => {
     <IonPage>
       <IonContent className="profile-content">
         <div className="profile-container">
-          <IonHeader>
-            <IonToolbar>
-              <IonTitle>Perfil</IonTitle>
-            </IonToolbar>
-          </IonHeader>
+          <IonTitle>Perfil</IonTitle>
           <div className="profile-avatar-section">
             <div className="profile-avatar-container">
               <IonAvatar className="profile-avatar">
