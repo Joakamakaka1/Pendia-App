@@ -45,17 +45,9 @@ ion-footer,
 ion-toolbar,
 ion-tab-bar,
 ion-header {
-  --ion-background-color: var(--ion-background-color-dark);
+  --ion-background-color: var(--ion-background-color-dark) !important;
 }
 
 ion-card {
   --ion-background-color: var(--ion-background-color-black);
-}
-
-ion-tab-bar.ios {
-  --background: transparent !important;
-}
-
-ion-tab-bar.md {
-  --background: transparent !important;
 }
