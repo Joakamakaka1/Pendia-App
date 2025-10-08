@@ -141,7 +141,7 @@ export const Tab4: React.FC = () => {
               className="profile-save-button"
               // onClick={handleSave}
             >
-              Save Changes
+              Guardar cambios
             </IonButton>
 
             <IonButton
@@ -150,7 +150,7 @@ export const Tab4: React.FC = () => {
               className="profile-logout-button"
               // onClick={handleLogout}
             >
-              Log Out
+              Cerrar sesión
             </IonButton>
           </div>
         </div>

@@ -25,7 +25,7 @@ import { Home } from "./pages/Home";
 import { TabsLayout } from "./routes/TabsLayout";
 import Login from "./pages/auth/login/Login";
 import Register from "./pages/auth/register/Register";
-import "./index.css";
+import "./App.css";
 setupIonicReact();
 
 const App: React.FC = () => (
