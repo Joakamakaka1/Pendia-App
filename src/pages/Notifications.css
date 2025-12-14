@@ -1,0 +1,86 @@
+/* Notifications Page Styling - Dark Blue Theme */
+
+.notifications-content {
+  --background: var(--pendia-bg-app); /* Dark Background */
+}
+
+.notifications-toolbar {
+  --background: var(--pendia-bg-app);
+  --border-width: 0;
+  --color: var(--pendia-text-primary);
+}
+
+.notifications-container {
+  padding: var(--pendia-padding-page);
+}
+
+.notifications-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--pendia-text-primary);
+  margin: 0 0 24px 0;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Item Layout */
+.notif-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--pendia-border-color); /* Dark Divider */
+}
+
+/* Image */
+.notif-image-container {
+  flex-shrink: 0;
+}
+
+.notif-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--pendia-bg-surface);
+  display: block;
+}
+
+/* Text Content */
+.notif-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notif-message {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--pendia-text-secondary); /* Grey Description */
+  line-height: 1.4;
+}
+
+.notif-message strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--pendia-text-primary); /* White Title */
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+/* Meta / Time */
+.notif-meta {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.notif-time {
+  font-size: 0.75rem;
+  color: var(--pendia-text-secondary); /* Grey Time */
+  white-space: nowrap;
+}

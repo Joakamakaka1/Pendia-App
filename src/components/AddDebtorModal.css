@@ -1,0 +1,92 @@
+/* Dark Blue Modal Styling */
+
+ion-modal {
+  --border-radius: var(--pendia-border-radius-card);
+  --box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  --background: var(--pendia-bg-app);
+  --width: 95%;
+  --height: 50%;
+}
+
+/* Remove default header styling overrides */
+.modal-header {
+  padding-top: 16px;
+}
+
+.modal-header ion-toolbar {
+  --background: transparent;
+  --border-width: 0;
+  --min-height: 48px;
+}
+
+.modal-header ion-title {
+  color: var(--pendia-text-primary); /* White Title */
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-align: center;
+  padding-inline: 16px;
+}
+
+.modal-header ion-buttons ion-button {
+  --color: var(--pendia-text-secondary); /* Grey Close Icon */
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+.modal-content {
+  --background: var(--pendia-bg-app); /* Dark Background */
+  --padding-top: 0;
+  --padding-bottom: 24px;
+  --padding-start: 24px;
+  --padding-end: 24px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 16px;
+}
+
+.modal-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-input-group label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--pendia-text-secondary); /* Grey Label */
+  margin-left: 4px;
+}
+
+.custom-input {
+  background: var(--pendia-bg-surface); /* Dark Input Background */
+  border: 1px solid transparent;
+  border-radius: var(--pendia-border-radius-input);
+  padding: 16px;
+  font-size: 1.1rem;
+  color: var(--pendia-text-primary); /* White Input Text */
+  outline: none;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.custom-input:focus {
+  background: var(--pendia-bg-surface-hover);
+  border-color: var(--pendia-color-primary); /* Blue focus border */
+  box-shadow: 0 4px 12px rgba(42, 106, 159, 0.15);
+}
+
+.modal-save-button {
+  margin-top: 16px;
+  --background: var(--pendia-color-primary); /* Blue Button */
+  --border-radius: var(--pendia-border-radius-button);
+  --color: var(--pendia-text-primary);
+  font-weight: 700;
+  height: var(--pendia-height-button);
+  font-size: 1.1rem;
+  --box-shadow: var(--pendia-shadow-primary);
+  text-transform: none;
+}

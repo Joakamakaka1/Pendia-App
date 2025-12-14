@@ -1,0 +1,147 @@
+/* Authentication Pages Styling - Dark Blue Theme */
+
+.auth-content {
+  --background: #181a1b; /* Dark Background */
+}
+
+/* Login Styling - Dark Blue Theme */
+
+.auth-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--pendia-padding-page);
+  /* Use a subtle gradient or solid app background */
+  background: radial-gradient(
+    circle at top right,
+    #232526 0%,
+    var(--pendia-bg-app) 60%
+  );
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px; /* Constrain width on large screens */
+  padding: 0;
+  border-radius: 0;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--pendia-text-primary);
+  margin-bottom: 8px;
+}
+
+.auth-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--pendia-text-secondary); /* Grey Subtext */
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Horizontal alignment for icon + input */
+.auth-input-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background: var(--pendia-bg-surface); /* Container has the background */
+  border-radius: var(--pendia-border-radius-input);
+  padding: 4px 16px;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.auth-input-group:focus-within {
+  background: var(--pendia-bg-surface-hover);
+  border-color: var(--pendia-color-primary); /* Blue Focus */
+  box-shadow: 0 4px 12px rgba(42, 106, 159, 0.15);
+}
+
+.auth-icon {
+  font-size: 1.4rem;
+  color: var(--pendia-text-secondary);
+  min-width: 24px;
+  position: static; /* Reset absolute if present */
+  transform: none;
+}
+
+/* Unused .auth-input-group ion-label removed */
+
+.auth-input {
+  --background: transparent;
+  --color: var(--pendia-text-primary);
+  --placeholder-color: var(--pendia-text-placeholder);
+  --placeholder-opacity: 1;
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 14px;
+  --padding-bottom: 14px;
+  font-size: 1rem;
+  box-shadow: none;
+  font-weight: 500;
+  flex: 1;
+  margin-top: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  height: auto; /* Let container control height */
+}
+
+/* Focus State applied to container, not input directly */
+.auth-input.has-focus {
+  border: none;
+  background: transparent !important;
+}
+
+.auth-icon-end {
+  font-size: 1.4rem;
+  color: var(--pendia-text-secondary);
+  cursor: pointer;
+  min-width: 24px;
+}
+
+/* Remove default Ionic underline */
+.auth-input .native-input-wrapper {
+  border: none;
+}
+
+.auth-forgot-password {
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+/* Unused .auth-forgot-password a removed */
+
+.auth-button {
+  margin-top: 24px;
+  --background: var(--pendia-color-primary); /* Blue Button */
+  --color: var(--pendia-text-primary);
+  --border-radius: var(--pendia-border-radius-button);
+  --box-shadow: var(--pendia-shadow-primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  height: var(--pendia-height-button);
+  text-transform: none;
+}
+
+.auth-footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--pendia-text-secondary);
+}
+
+/* Unused classes removed: .auth-input-group ion-label, .auth-forgot-password a, .auth-link */

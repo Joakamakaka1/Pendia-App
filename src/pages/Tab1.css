@@ -1,153 +1,252 @@
+/* Tab1 / Pendientes Page Styling - Dark Blue Theme */
+
 .debts-content {
-  --background: var(--ion-background-color-dark);
+  --background: var(--pendia-bg-app);
 }
 
 .debts-container {
-  width: 90%;
-  margin: 20px auto 20px auto;
+  padding: var(--pendia-padding-page);
+  padding-bottom: 100px; /* Space for FAB */
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.debts-header {
+  margin-bottom: var(--pendia-spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .debts-title {
-  padding-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 0;
+  color: var(--pendia-text-primary); /* White Title */
 }
 
+.debts-subtitle {
+  color: var(--pendia-text-secondary); /* Grey Subtitle */
+  margin: var(--pendia-spacing-xs) 0 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.debts-notification-btn {
+  --color: var(--pendia-text-primary); /* White Icon */
+  font-size: 1.2rem;
+  margin: 0;
+  height: 48px;
+  width: 48px;
+  --padding-start: 0;
+  --padding-end: 0;
+  --background-hover: var(--pendia-bg-surface);
+  border-radius: var(--pendia-border-radius-round);
+  position: relative; /* Context for badge */
+  overflow: visible; /* Allow badge to spill out */
+}
+
+.notification-badge {
+  position: absolute;
+  top: var(--pendia-spacing-xs);
+  right: var(--pendia-spacing-xs);
+  background: var(--pendia-color-danger); /* Red Badge */
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--pendia-border-radius-round);
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--pendia-bg-app); /* Cutout effect matching background */
+  z-index: 10;
+}
+
+/* Redesigned Total Card - Dark Theme */
 .debts-total-card {
-  margin: 0 0 24px 0;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  box-shadow: 0 4px 4px rgba(102, 126, 234, 0.3);
-  border: none;
-  width: 100%;
-  margin-top: 10px;
+  margin: 0 0 var(--pendia-spacing-xl) 0;
+  background: var(--pendia-bg-surface); /* Dark Card Background */
+  border-radius: var(--pendia-border-radius-card);
+  box-shadow: none;
+  color: var(--pendia-text-primary);
+  overflow: visible;
+  position: relative;
+  border: 1px solid var(--pendia-border-color);
 }
 
 .debts-total-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-
-.debts-total-info {
-  flex: 1;
+  padding: var(--pendia-spacing-xl) var(--pendia-padding-page);
+  text-align: center;
 }
 
 .debts-total-label {
-  color: rgba(255, 255, 255, 0.9);
+  display: block;
   font-size: 0.9rem;
-  margin: 0 0 8px 0;
-  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  color: var(--pendia-text-secondary);
+  margin-bottom: var(--pendia-spacing-md);
+  font-weight: 600;
 }
 
 .debts-total-amount {
-  color: var(--color-white);
-  font-size: 2.5rem;
-  margin: 0 0 4px 0;
-}
-
-.debts-total-count {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.85rem;
+  font-size: 3.5rem;
+  font-weight: 800;
   margin: 0;
+  line-height: 1;
+  color: var(--pendia-color-primary); /* Blue Amount */
+  letter-spacing: -2px;
 }
 
-.debts-total-icon {
-  font-size: 3rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-left: 16px;
+.debts-total-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pendia-spacing-sm);
+  background: rgba(
+    42,
+    106,
+    159,
+    0.15
+  ); /* Blue Tint - leaving as rgba for transparency, or could define a tint var */
+  padding: var(--pendia-spacing-sm) var(--pendia-spacing-lg);
+  border-radius: var(--pendia-border-radius-pill);
+  margin-top: var(--pendia-spacing-lg);
+  font-size: 0.9rem;
+  color: var(--pendia-color-primary); /* Blue Text */
+  font-weight: 600;
+}
+
+/* List Styles - Clean List */
+.debts-list-container {
+  margin-top: var(--pendia-spacing-lg);
+}
+
+.debts-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--pendia-spacing-md);
+}
+
+.debts-list-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--pendia-text-primary);
+}
+
+.debts-count-badge {
+  background: var(--pendia-bg-surface);
+  color: var(--pendia-text-secondary);
+  padding: var(--pendia-spacing-xs) var(--pendia-spacing-md);
+  border-radius: var(--pendia-border-radius-sm);
+  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 .debts-list {
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
-.debts-list-title {
-  color: var(--color-white);
-  font-size: 1.25rem;
-  margin: 0 0 16px 8px;
+.debt-item {
+  background: transparent;
+  padding: var(--pendia-spacing-lg) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: none;
+  border-bottom: 1px solid var(--pendia-border-color); /* Dark Divider */
 }
 
-.debt-person-card {
-  margin: 0 0 12px 0;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  width: 100%;
-}
-
-.debt-person-item {
-  --background: transparent;
-  --padding-start: 16px;
-  --padding-end: 8px;
-  --inner-padding-end: 0;
+.debt-item-left {
+  display: flex;
+  align-items: center;
+  gap: var(--pendia-spacing-md);
 }
 
 .debt-person-avatar {
   width: 50px;
   height: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--pendia-border-radius-sm);
+  border: none;
+  background: var(--pendia-bg-surface);
+}
+
+.debt-person-avatar img {
+  border-radius: var(--pendia-border-radius-sm);
 }
 
 .debt-person-info {
-  margin-left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--pendia-spacing-xs);
 }
 
 .debt-person-name {
-  color: var(--color-white);
-  font-size: 1.1rem;
-  margin: 0 0 4px 0;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--pendia-text-primary);
+}
+
+.debt-person-status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--pendia-text-secondary);
+  font-weight: 500;
+}
+
+.debt-item-right {
+  display: flex;
+  align-items: center;
+  gap: var(--pendia-spacing-md);
 }
 
 .debt-person-amount {
-  color: var(--color-gray);
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--pendia-text-primary);
 }
 
 .debt-delete-button {
-  --color: #ff3b30;
-  --border-radius: 8px;
   margin: 0;
-  width: 40px;
-  height: 40px;
+  height: 50px;
+  width: 50px;
+  opacity: 0.8;
+  --color: var(--pendia-color-danger); /* Red can stay red for delete */
 }
 
-.debts-add-section {
-  padding: 16px 0 32px 0;
+/* Floating Action Button Container */
+.debts-fab-container {
+  position: fixed;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  padding: var(--pendia-padding-page) var(--pendia-padding-page) 34px
+    var(--pendia-padding-page);
+  background: linear-gradient(
+    to top,
+    var(--pendia-bg-app) 70%,
+    transparent 100%
+  );
+  z-index: 100;
+  display: flex;
+  justify-content: center;
 }
 
 .debts-add-button {
-  --background: #3880ff;
-  --border-radius: 16px;
-  --box-shadow: 0 4px 4px rgba(56, 128, 255, 0.3);
-  font-weight: 600;
-  height: 48px;
-  font-size: 1rem;
-  position: fixed;
-  bottom: 10px;
-  left: 49.5%;
-  width: 90%;
-  transform: translateX(-50%);
-  z-index: 10;
-  font-size: 0.9rem;
-}
-
-.debts-empty-state {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.debts-empty-icon {
-  font-size: 4rem;
-  color: var(--color-gray);
-  margin-bottom: 16px;
-}
-
-.debts-empty-text {
-  color: var(--color-gray);
-  font-size: 1rem;
-  margin: 0;
+  width: 100%;
+  max-width: 400px;
+  --background: var(--pendia-color-primary); /* Blue Button */
+  --color: var(--pendia-text-primary);
+  --border-radius: var(--pendia-border-radius-pill);
+  height: 56px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  --box-shadow: var(--pendia-shadow-primary);
 }

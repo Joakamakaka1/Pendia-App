@@ -1,8 +1,8 @@
 /* GLOBAL CSS */
 
 :root {
-  --color-white: #ffffff;
-  --color-gray: #c4c4c4;
+  --color-white: var(--pendia-text-primary);
+  --color-gray: var(--pendia-text-secondary);
   --ion-background-color-dark: #000000;
   --ion-background-color-black: #181818;
 }
@@ -19,8 +19,7 @@ h4,
 h5,
 h6,
 ion-title {
-  color: var(--color-white);
-  font-family: "Super Trend", sans-serif !important;
+  color: var(--pendia-text-primary);
 }
 
 ion-title {
@@ -35,20 +34,25 @@ ion-button {
 
 ion-label,
 p {
-  color: var(--color-gray);
-  font-family: sans-serif;
+  color: var(--pendia-text-secondary);
 }
 
 ion-page,
 ion-content,
 ion-footer,
 ion-toolbar,
-ion-tab-bar,
 ion-header,
 ion-tabs {
   --ion-background-color: var(--ion-background-color-dark) !important;
 }
 
+ion-tab-bar {
+  --background: var(--pendia-bg-app);
+  border-top: 1px solid var(--pendia-border-color);
+  /* Use the blue tint for selected tab to match theme usually, but user didn't explicitly ask to change tab icons. 
+     Keeping it minimal as requested. */
+}
+
 ion-card {
-  --ion-background-color: var(--ion-background-color-black);
+  --ion-background-color: var(--pendia-bg-surface);
 }

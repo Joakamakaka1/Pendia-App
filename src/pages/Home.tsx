@@ -1,11 +1,4 @@
-import {
-  IonButton,
-  IonContent,
-  IonFooter,
-  IonPage,
-  IonTitle,
-  IonToolbar,
-} from "@ionic/react";
+import { IonButton, IonContent, IonPage } from "@ionic/react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import React from "react";
 import { useHistory } from "react-router";
@@ -15,76 +8,44 @@ export const Home: React.FC = () => {
   const navigate = useHistory();
 
   const navigateToLogin = () => {
-    navigate.push("/menu");
+    navigate.push("/login");
   };
 
   const navigateToRegister = () => {
-    navigate.push("/menu");
+    navigate.push("/register");
   };
 
   return (
     <IonPage>
-      <IonContent className="home-content">
+      <IonContent>
         <div className="home-container">
-          {/* Header Section */}
-          <div className="home-header">
-            <div className="home-toolbar">
-              <IonTitle className="home-title">
-                <span className="home-title-line">Bienvenido</span>
-              </IonTitle>
-              <IonTitle className="home-title">
-                <span>a Pendia</span>
-              </IonTitle>
-            </div>
-
-            <p className="home-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
-              doloribus asperiores officia.
-            </p>
+          {/* Centered Animation Section */}
+          <div>
+            <DotLottieReact src="/assets/imgs/home.lottie" loop autoplay />
           </div>
 
-          {/* Centered Animation Section */}
-          <div className="home-animation-container">
-            <div>
-              <DotLottieReact
-                src="/assets/imgs/home.lottie"
-                loop
-                autoplay
-                className="home-lottie"
-              />
-            </div>
+          {/* Text Section */}
+          <div>
+            <h1 className="home-headline">
+              Mantén el control de tus finanzas con nosotros.
+            </h1>
           </div>
 
           {/* Buttons Section */}
           <div className="home-buttons">
             <IonButton
               expand="block"
-              shape="round"
-              onClick={navigateToLogin}
-              className="home-button"
-            >
-              Iniciar sesion
-            </IonButton>
-            <IonButton
-              expand="block"
-              shape="round"
+              className="home-button-primary"
               onClick={navigateToRegister}
-              className="home-button"
-              color="secondary"
             >
               Registrarse
             </IonButton>
+            <button className="home-button-link" onClick={navigateToLogin}>
+              Iniciar sesión
+            </button>
           </div>
         </div>
       </IonContent>
-
-      <IonFooter className="home-footer">
-        <IonToolbar>
-          <div className="home-footer-text">
-            © 2025 Pendia by Joaquin. All rights reserved.
-          </div>
-        </IonToolbar>
-      </IonFooter>
     </IonPage>
   );
 };

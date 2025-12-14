@@ -1,153 +1,118 @@
-import {
-  IonAvatar,
-  IonButton,
-  IonCard,
-  IonCardContent,
-  IonContent,
-  IonIcon,
-  IonInput,
-  IonItem,
-  IonLabel,
-  IonPage,
-  IonTitle,
-} from "@ionic/react";
-import { camera, lockOpen, person } from "ionicons/icons";
+import { IonButton, IonContent, IonIcon, IonPage } from "@ionic/react";
+import { camera, logOutOutline } from "ionicons/icons";
 import React, { useState } from "react";
+import ChangePasswordModal from "../components/ChangePasswordModal";
 import "./Tab4.css";
 
 export const Tab4: React.FC = () => {
   const [name, setName] = useState("Joaquin");
   const [email, setEmail] = useState("joaquin@pendia.com");
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
 
-  // const handleSave = () => {
-  //   console.log("Perfil guardado:", { name, email });
-  // };
-
-  // const handleLogout = () => {
-  //   navigate.push("/login");
-  // };
+  const handlePasswordChange = () => {
+    console.log("Password changed");
+    setIsPasswordModalOpen(false);
+  };
 
   return (
     <IonPage>
       <IonContent className="profile-content">
         <div className="profile-container">
-          <IonTitle>Perfil</IonTitle>
+          {/* Header */}
+          <div className="profile-header-top">
+            <IonIcon icon={undefined} /> {/* Spacer or Back button if needed */}
+            <h1 className="profile-title">Contact info</h1>
+          </div>
+
+          {/* Avatar Section */}
           <div className="profile-avatar-section">
-            <div className="profile-avatar-container">
-              <IonAvatar className="profile-avatar">
-                <img
-                  src="https://api.dicebear.com/7.x/initials/svg?seed=JC&backgroundColor=666666&color=ffffff&fontSize=40"
-                  alt="Profile"
-                />
-              </IonAvatar>
-              <button className="profile-avatar-edit">
+            <div className="profile-avatar-wrapper">
+              <img
+                src="https://api.dicebear.com/7.x/initials/svg?seed=JC&backgroundColor=666666&color=ffffff&fontSize=40"
+                alt="Profile"
+                className="profile-avatar-img"
+              />
+              <button className="profile-avatar-edit-btn">
                 <IonIcon icon={camera} />
               </button>
             </div>
-            <h2 className="profile-name">{name}</h2>
-            <p className="profile-email">{email}</p>
           </div>
 
-          <IonCard className="profile-card">
-            <IonCardContent>
-              <div className="profile-card-header">
-                <IonIcon icon={person} className="profile-card-icon" />
-                <h2 className="profile-card-title">Informacion personal</h2>
+          {/* Fields Section */}
+          <div className="profile-fields">
+            {/* Name */}
+            <div className="profile-field-row">
+              <div className="profile-field-info">
+                <label>Name</label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="profile-field-input"
+                />
               </div>
+              <button className="profile-change-btn">Change</button>
+            </div>
 
-              <div className="profile-form">
-                <IonItem className="profile-form-item">
-                  <IonLabel position="stacked" className="profile-form-label">
-                    Full Name
-                  </IonLabel>
-                  <IonInput
-                    value={name}
-                    onIonInput={(e) =>
-                      setName((e.detail.value as string) || "")
-                    }
-                    className="profile-form-input"
-                  />
-                </IonItem>
-
-                <IonItem className="profile-form-item">
-                  <IonLabel position="stacked" className="profile-form-label">
-                    Email
-                  </IonLabel>
-                  <IonInput
-                    type="email"
-                    value={email}
-                    onIonInput={(e) =>
-                      setEmail((e.detail.value as string) || "")
-                    }
-                    className="profile-form-input"
-                  />
-                </IonItem>
-
-                <IonItem className="profile-form-item">
-                  <IonLabel position="stacked" className="profile-form-label">
-                    Phone Number
-                  </IonLabel>
-                  <IonInput
-                    type="tel"
-                    placeholder="+1 234 567 8900"
-                    className="profile-form-input"
-                  />
-                </IonItem>
+            {/* Email */}
+            <div className="profile-field-row">
+              <div className="profile-field-info">
+                <label>Email</label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="profile-field-input"
+                />
               </div>
-            </IonCardContent>
-          </IonCard>
+              <button className="profile-change-btn">Change</button>
+            </div>
 
-          <IonCard className="profile-card">
-            <IonCardContent>
-              <div className="profile-card-header">
-                <IonIcon icon={lockOpen} className="profile-card-icon" />
-                <h2 className="profile-card-title">Seguridad</h2>
+            {/* Phone (Static for demo) */}
+            <div className="profile-field-row">
+              <div className="profile-field-info">
+                <label>Phone Number</label>
+                <div className="profile-field-value">-</div>
               </div>
+              {/* No Change button if empty/static, or add one */}
+            </div>
 
-              <div className="profile-actions">
-                <IonButton
-                  expand="block"
-                  fill="clear"
-                  className="profile-action-button"
-                >
-                  <div className="profile-action-button-text">
-                    Cambiar contraseña
-                  </div>
-                </IonButton>
-
-                <IonButton
-                  expand="block"
-                  fill="clear"
-                  className="profile-action-button"
-                >
-                  <div className="profile-action-button-text">
-                    Autenticación de dos factores
-                  </div>
-                </IonButton>
+            {/* Security Section (kept as fields) */}
+            <div
+              className="profile-field-row"
+              onClick={() => setIsPasswordModalOpen(true)}
+            >
+              <div className="profile-field-info">
+                <label>Password</label>
+                <div className="profile-field-value">••••••••</div>
               </div>
-            </IonCardContent>
-          </IonCard>
+              <button className="profile-change-btn">Change</button>
+            </div>
+          </div>
 
           {/* Actions Section */}
           <div className="profile-actions-section">
             <IonButton
               expand="block"
-              className="profile-save-button"
-              // onClick={handleSave}
-            >
-              Guardar cambios
-            </IonButton>
-
-            <IonButton
-              expand="block"
               fill="outline"
+              color="danger"
               className="profile-logout-button"
-              // onClick={handleLogout}
             >
-              Cerrar sesión
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <IonIcon icon={logOutOutline} style={{ fontSize: "1.2rem" }} />
+                <span>LOG OUT</span>
+              </div>
             </IonButton>
           </div>
         </div>
+
+        <ChangePasswordModal
+          isOpen={isPasswordModalOpen}
+          onClose={() => setIsPasswordModalOpen(false)}
+          onSave={handlePasswordChange}
+        />
       </IonContent>
     </IonPage>
   );

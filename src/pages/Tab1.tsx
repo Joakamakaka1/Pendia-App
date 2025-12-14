@@ -1,21 +1,19 @@
 import {
-  IonAvatar,
   IonButton,
   IonCard,
   IonContent,
   IonIcon,
-  IonItem,
-  IonLabel,
   IonPage,
   IonTitle,
 } from "@ionic/react";
-import { add, personAdd, trash } from "ionicons/icons";
-import React from "react";
+import { add, notificationsOutline, personAdd, trash } from "ionicons/icons";
+import React, { useState } from "react";
+import AddDebtorModal from "../components/AddDebtorModal";
 import Person from "../model/PendiaInterface";
 import "./Tab1.css";
 
 const Tab1: React.FC = () => {
-  const people: Person[] = [
+  const [people, setPeople] = useState<Person[]>([
     {
       id: 1,
       name: "Juan Pérez",
@@ -51,97 +49,114 @@ const Tab1: React.FC = () => {
       photo:
         "https://api.dicebear.com/7.x/initials/svg?seed=PG&backgroundColor=666666&color=ffffff&fontSize=40",
     },
-    {
-      id: 5,
-      name: "Pedro García",
-      amount: 25,
-      photo:
-        "https://api.dicebear.com/7.x/initials/svg?seed=PG&backgroundColor=666666&color=ffffff&fontSize=40",
-    },
-    {
-      id: 5,
-      name: "Pedro García",
-      amount: 25,
-      photo:
-        "https://api.dicebear.com/7.x/initials/svg?seed=PG&backgroundColor=666666&color=ffffff&fontSize=40",
-    },
-  ];
+  ]);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const total = people.reduce((acc, person) => acc + person.amount, 0);
 
-  // const handleDeletePerson = (personId: number) => {
+  const handleDeletePerson = (personId: number) => {
+    setPeople(people.filter((p) => p.id !== personId));
+  };
 
-  // };
-
-  // const handleAddPerson = () => {
-
-  // };
+  const handleAddPerson = (name: string, amount: number) => {
+    const newPerson: Person = {
+      id: Date.now(),
+      name,
+      amount,
+      photo: `https://api.dicebear.com/7.x/initials/svg?seed=${name}&backgroundColor=666666&color=ffffff&fontSize=40`,
+    };
+    setPeople([...people, newPerson]);
+  };
 
   return (
     <IonPage>
       <IonContent fullscreen className="debts-content">
         <div className="debts-container">
-          <IonTitle className="debts-title">Deudas</IonTitle>
+          <div className="debts-header">
+            <div>
+              <IonTitle className="debts-title">Mis Deudores</IonTitle>
+              <p className="debts-subtitle">Así van tus cuentas</p>
+            </div>
+            <IonButton
+              fill="clear"
+              className="debts-notification-btn"
+              routerLink="/notifications"
+            >
+              <IonIcon icon={notificationsOutline} />
+              <span className="notification-badge">3</span>
+            </IonButton>
+          </div>
+
           <IonCard className="debts-total-card">
             <div className="debts-total-content">
-              <div className="debts-total-info">
-                <h3 className="debts-total-label">Total Pendiente</h3>
-                <h1 className="debts-total-amount">€{total}</h1>
-                <p className="debts-total-count">
-                  {people.length} {people.length === 1 ? "persona" : "personas"}{" "}
-                  te deben dinero
-                </p>
-              </div>
-              <div className="debts-total-icon">
-                <IonIcon icon={personAdd} />
+              <div>
+                <span className="debts-total-label">Total por cobrar</span>
+                <h1 className="debts-total-amount">€{total.toFixed(2)}</h1>
+                <div className="debts-total-pill">
+                  <IonIcon icon={personAdd} />
+                  <span>
+                    {people.length}{" "}
+                    {people.length === 1 ? "persona" : "personas"}
+                  </span>
+                </div>
               </div>
             </div>
           </IonCard>
 
-          <div className="debts-list">
-            <h3 className="debts-list-title">Lista de Deudas</h3>
+          <div className="debts-list-container">
+            <div className="debts-list-header">
+              <h3>Listado</h3>
+              <span className="debts-count-badge">{people.length}</span>
+            </div>
 
-            {people.map((person) => (
-              <IonCard key={person.id} className="debt-person-card">
-                <IonItem lines="none" className="debt-person-item">
-                  <IonAvatar slot="start" className="debt-person-avatar">
-                    <img src={person.photo} alt={person.name} />
-                  </IonAvatar>
-
-                  <IonLabel className="debt-person-info">
-                    <h3 className="debt-person-name">{person.name}</h3>
-                    <p className="debt-person-amount">
-                      Te debe €{person.amount}
-                    </p>
-                  </IonLabel>
-
-                  <IonButton
-                    fill="clear"
-                    color="danger"
-                    size="small"
-                    className="debt-delete-button"
-                    // onClick={() => handleDeletePerson(person.id)}
-                  >
-                    <IonIcon icon={trash} slot="icon-only" />
-                  </IonButton>
-                </IonItem>
-              </IonCard>
-            ))}
-          </div>
-
-          {/* Add Button */}
-          <div className="debts-add-section">
-            <IonButton
-              expand="block"
-              shape="round"
-              className="debts-add-button"
-              // onClick={handleAddPerson}
-            >
-              <IonIcon icon={add} slot="start" />
-              Añadir nueva persona
-            </IonButton>
+            <div className="debts-list">
+              {people.map((person) => (
+                <div key={person.id} className="debt-item">
+                  <div className="debt-item-left">
+                    <div className="debt-person-avatar">
+                      <img src={person.photo} alt={person.name} />
+                    </div>
+                    <div className="debt-person-info">
+                      <h3 className="debt-person-name">{person.name}</h3>
+                      <p className="debt-person-status">Pendiente</p>
+                    </div>
+                  </div>
+                  <div className="debt-item-right">
+                    <span className="debt-person-amount">€{person.amount}</span>
+                    <IonButton
+                      fill="clear"
+                      color="medium"
+                      className="debt-delete-button"
+                      onClick={() => handleDeletePerson(person.id)}
+                    >
+                      <IonIcon icon={trash} slot="icon-only" color="danger" />
+                    </IonButton>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* Add Button - Floating Style */}
+        <div className="debts-fab-container">
+          <IonButton
+            expand="block"
+            shape="round"
+            className="debts-add-button"
+            onClick={() => setIsModalOpen(true)}
+          >
+            <IonIcon icon={add} slot="start" />
+            Nuevo deudor
+          </IonButton>
+        </div>
+
+        <AddDebtorModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onSave={handleAddPerson}
+        />
       </IonContent>
     </IonPage>
   );

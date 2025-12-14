@@ -1,4 +1,3 @@
-import React from "react";
 import {
   IonContent,
   IonHeader,
@@ -6,18 +5,16 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
+import React from "react";
 import "./Tab3.css";
 
 const Tab3: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle className="ion-text-center">PendIA</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent>
-        <div className="example-content">PendIA</div>
+        <div className="home-text-section">
+          <h1>Comming soon...</h1>
+        </div>
       </IonContent>
     </IonPage>
   );

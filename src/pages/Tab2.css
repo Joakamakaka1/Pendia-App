@@ -1,0 +1,169 @@
+/* Tab2 / Solicitudes Page Styling - Dark Blue Theme */
+
+.requests-content {
+  --background: var(--pendia-bg-app);
+}
+
+.requests-container {
+  padding: var(--pendia-padding-page);
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.requests-header {
+  margin-bottom: 24px;
+}
+
+.requests-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--pendia-text-primary);
+  margin: 0;
+}
+
+/* List Items */
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.notification-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--pendia-border-color);
+  background: transparent;
+  align-items: center;
+}
+
+/* Avatar - Fixed Mismatch: Structure is .notification-left > .notification-avatar > img */
+.notification-left {
+  flex-shrink: 0;
+}
+
+.notification-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px; /* Rounded Square */
+  background: var(--pendia-bg-surface);
+  overflow: hidden; /* Ensure image clips */
+}
+
+.notification-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.notification-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0; /* Text truncation logic */
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ensure time stays at top */
+  gap: 8px;
+}
+
+.notification-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--pendia-text-primary);
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible;
+  text-overflow: clip;
+  word-break: break-word; /* Ensure long names don't break layout */
+}
+
+.notification-time {
+  font-size: 0.75rem;
+  color: var(--pendia-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto; /* Push to right if wrapped */
+}
+
+.notification-message {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--pendia-text-secondary);
+  line-height: 1.4;
+}
+
+.notification-amount {
+  color: var(--pendia-text-primary);
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.notification-right {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+/* The buttons in TSX are plain <button> elements with classes 'notification-action-btn btn-reject/accept' */
+/* Unused .notification-icon-badge removed */
+.notification-action-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  font-size: 1.2rem; /* Icon size */
+  border: 2px solid transparent; /* Border width */
+  transition: all 0.2s ease;
+}
+
+.btn-accept {
+  color: var(--pendia-color-success); /* Green Icon */
+}
+
+.btn-reject {
+  color: var(--pendia-color-danger); /* Red Icon */
+}
+
+/* Empty State */
+.requests-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.requests-empty-icon {
+  font-size: 4rem;
+  color: var(--pendia-bg-surface);
+  margin-bottom: 16px;
+}
+
+.requests-empty h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--pendia-text-primary);
+  margin-bottom: 8px;
+}
+
+.requests-empty p {
+  font-size: 0.95rem;
+  color: var(--pendia-text-secondary);
+  max-width: 250px;
+}
