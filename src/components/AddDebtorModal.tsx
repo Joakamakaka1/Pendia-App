@@ -1,18 +1,15 @@
-import React, { useState } from "react";
 import {
-  IonModal,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
   IonButton,
   IonButtons,
+  IonContent,
+  IonHeader,
   IonIcon,
-  IonItem,
-  IonLabel,
-  IonInput,
+  IonModal,
+  IonTitle,
+  IonToolbar,
 } from "@ionic/react";
 import { closeOutline } from "ionicons/icons";
+import React, { useState } from "react";
 import "./AddDebtorModal.css";
 
 interface AddDebtorModalProps {

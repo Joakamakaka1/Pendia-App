@@ -1,15 +1,15 @@
-import React, { useState } from "react";
 import {
-  IonModal,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
-  IonContent,
   IonButton,
   IonButtons,
+  IonContent,
+  IonHeader,
   IonIcon,
+  IonModal,
+  IonTitle,
+  IonToolbar,
 } from "@ionic/react";
 import { closeOutline } from "ionicons/icons";
+import React, { useState } from "react";
 import "./AddDebtorModal.css"; // Reusing the same CSS styles for consistency
 
 interface ChangePasswordModalProps {

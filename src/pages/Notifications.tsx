@@ -4,9 +4,7 @@ import {
   IonContent,
   IonHeader,
   IonPage,
-  IonTitle,
   IonToolbar,
-  IonIcon,
 } from "@ionic/react";
 import { chevronBack } from "ionicons/icons";
 import React from "react";
