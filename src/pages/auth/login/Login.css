@@ -86,8 +86,8 @@
 
 .auth-input {
   --background: transparent;
-  --color: var(--pendia-text-primary);
-  --placeholder-color: var(--pendia-text-placeholder);
+  --color: #ffffff;
+  --placeholder-color: #dddddd;
   --placeholder-opacity: 1;
   --padding-start: 0;
   --padding-end: 0;
@@ -101,7 +101,8 @@
   border: none;
   border-radius: 0;
   background: transparent;
-  height: auto; /* Let container control height */
+  height: auto;
+  color: #ffffff !important; /* Force for non-shadow inputs or fallbacks */
 }
 
 /* Focus State applied to container, not input directly */
