@@ -64,6 +64,10 @@
   border: 1px solid transparent;
 }
 
+.auth-input {
+  color: var(--pendia-text-primary);
+}
+
 .auth-input-group:focus-within {
   background: var(--pendia-bg-surface-hover);
   border-color: var(--pendia-color-primary); /* Blue Focus */

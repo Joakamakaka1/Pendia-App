@@ -94,7 +94,7 @@
 
 .debts-total-amount {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 600;
   margin: 0;
   line-height: 1;
   color: var(--pendia-color-primary); /* Blue Amount */
