@@ -86,8 +86,7 @@
 
 .auth-input {
   --background: transparent;
-  --color: #ffffff;
-  --placeholder-color: #dddddd;
+  color: var(--pendia-text-primary);
   --placeholder-opacity: 1;
   --padding-start: 0;
   --padding-end: 0;
@@ -102,13 +101,12 @@
   border-radius: 0;
   background: transparent;
   height: auto;
-  color: #ffffff !important; /* Force for non-shadow inputs or fallbacks */
 }
 
 /* Focus State applied to container, not input directly */
 .auth-input.has-focus {
   border: none;
-  background: transparent !important;
+  background: transparent;
 }
 
 .auth-icon-end {
