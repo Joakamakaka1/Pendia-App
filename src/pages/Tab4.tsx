@@ -10,7 +10,6 @@ export const Tab4: React.FC = () => {
   const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(false);
 
   const handlePasswordChange = () => {
-    console.log("Password changed");
     setIsPasswordModalOpen(false);
   };
 

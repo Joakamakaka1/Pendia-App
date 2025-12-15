@@ -20,7 +20,6 @@ const Login: React.FC = () => {
 
   const handleLogin = () => {
     // Mock login logic
-    console.log("Logging in with:", email, password);
     history.push("/menu/tab1");
   };
 
@@ -43,7 +42,7 @@ const Login: React.FC = () => {
                 placeholder="Correo electrónico"
                 className="auth-input"
                 value={email}
-                onIonChange={(e) => setEmail(e.detail.value!)}
+                onIonChange={(e) => setEmail(e.detail.value || "")}
               />
             </div>
 
@@ -54,7 +53,7 @@ const Login: React.FC = () => {
                 placeholder="Contraseña"
                 className="auth-input"
                 value={password}
-                onIonChange={(e) => setPassword(e.detail.value!)}
+                onIonChange={(e) => setPassword(e.detail.value || "")}
               />
               <IonIcon
                 icon={showPassword ? eyeOff : eye}

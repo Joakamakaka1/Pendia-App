@@ -27,7 +27,6 @@ const Register: React.FC = () => {
 
   const handleRegister = () => {
     // Mock register logic
-    console.log("Registering:", name, email, password);
     history.push("/menu/tab1");
   };
 
@@ -50,7 +49,7 @@ const Register: React.FC = () => {
                 placeholder="Nombre completo"
                 className="auth-input"
                 value={name}
-                onIonChange={(e) => setName(e.detail.value!)}
+                onIonChange={(e) => setName(e.detail.value || "")}
               />
             </div>
 
@@ -61,7 +60,7 @@ const Register: React.FC = () => {
                 placeholder="Correo electrónico"
                 className="auth-input"
                 value={email}
-                onIonChange={(e) => setEmail(e.detail.value!)}
+                onIonChange={(e) => setEmail(e.detail.value || "")}
               />
             </div>
 
@@ -72,7 +71,7 @@ const Register: React.FC = () => {
                 placeholder="Contraseña"
                 className="auth-input"
                 value={password}
-                onIonChange={(e) => setPassword(e.detail.value!)}
+                onIonChange={(e) => setPassword(e.detail.value || "")}
               />
               <IonIcon
                 icon={showPassword ? eyeOff : eye}
@@ -88,7 +87,7 @@ const Register: React.FC = () => {
                 placeholder="Confirmar contraseña"
                 className="auth-input"
                 value={confirmPassword}
-                onIonChange={(e) => setConfirmPassword(e.detail.value!)}
+                onIonChange={(e) => setConfirmPassword(e.detail.value || "")}
               />
             </div>
 
